@@ -1,7 +1,6 @@
 package NewQeury;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 
 public class HolidayFinder {
 
@@ -25,8 +24,7 @@ public class HolidayFinder {
     }
 
     public static boolean isHoliday(LocalDate date) {
-        // Here you would implement your own logic to determine whether a date is a holiday or not.
-        // For the sake of this example, we will just assume that every Saturday and Sunday are holidays.
+
         return date.getDayOfWeek() == java.time.DayOfWeek.SATURDAY ||
                 date.getDayOfWeek() == java.time.DayOfWeek.SUNDAY;
     }

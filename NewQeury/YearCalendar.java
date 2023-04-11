@@ -42,12 +42,10 @@ public class YearCalendar {
         //System.out.print("Enter year: ");
         //int year = scanner.nextInt();
 
-        // create a calendar instance for the given year
         Calendar calendar = Calendar.getInstance();
         calendar.clear();
         calendar.set(Calendar.YEAR, year);
 
-        // print out the full year calendar
         System.out.println("\n" + year + " Calendar\n");
         List<String> allHolidays = new ArrayList<>();
         for (int month = 0; month < 12; month++) {

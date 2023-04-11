@@ -85,7 +85,7 @@ public class HolidayCalendar {
         }
     }
 
-    // get all holidays in the given month
+    // get all holidays in the given month at a time
     private static List<String> getHolidaysInMonth(Calendar calendar) {
         List<String> holidays = new ArrayList<>();
         int daysInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
