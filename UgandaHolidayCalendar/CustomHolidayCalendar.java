@@ -5,20 +5,23 @@ import java.util.*;
 public class CustomHolidayCalendar {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Calendar calendar = new GregorianCalendar();
+
+
 
         int year = 0;
         while (true) {
-            System.out.print("Enter year (1800-2023): ");
+            System.out.print("Enter year after (1800): ");
             try {
                 //year = Integer.parseInt(input.nextLine());
                 year = scanner.nextInt();
 
-                if (year < 1800 || year > 2023) {
+                if (year < 1800) {
                     throw new Exception();
                 }
                 break;
             } catch (Exception e) {
-                System.out.println("Invalid year. Please enter a valid year between 1800 and 2023.");
+                System.out.println("Invalid year. Please enter a valid year after 1800.");
             }
         }
 
@@ -48,7 +51,6 @@ public class CustomHolidayCalendar {
 
         // create a Calendar object for the given year and month
         //Calendar calendar = GregorianCalendar();
-        Calendar calendar = new GregorianCalendar();
 
         calendar.set(Calendar.YEAR, year);
         calendar.set(Calendar.MONTH, month - 1); // Calendar months are 0-based
