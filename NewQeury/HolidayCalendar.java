@@ -4,7 +4,7 @@ import java.util.*;
 
 public class HolidayCalendar {
 
-    public static void main(String[] args) {
+    public void myHolidayCalendar() {
         Scanner scanner = new Scanner(System.in);
 
         int year = 0;

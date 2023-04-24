@@ -1,6 +1,5 @@
 package NewQeury;
 
-import java.util.*;
 import java.util.Scanner;
 
 public class CalendarProgram {
@@ -13,7 +12,8 @@ public class CalendarProgram {
                           1. Go To Date
                           2. View Month
                           3. View Year
-                          4. View Holidays
+                          4. View Random Holidays
+                          5. View Holiday for Months
                           0. Exit
                           """;
         System.out.println(homeView);
@@ -34,15 +34,14 @@ public class CalendarProgram {
                 HolidayFinder myHolidayFinderObject = new HolidayFinder();
                 myHolidayFinderObject.holidayFinder();
             }
-            case 0 ->{
-                System.out.println("hello 0");
-
+            case 5 ->{
+                HolidayCalendar myHolidayObject = new HolidayCalendar();
+                myHolidayObject.myHolidayCalendar();
             }
+            default -> throw new IllegalArgumentException("Invalid Input please try again: " + mySwitch);
 
 
         }
-
-
 
     }
 }
